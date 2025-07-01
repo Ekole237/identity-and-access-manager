@@ -1,4 +1,5 @@
-// src/components/auth/WithRole.tsx
+"use client";
+
 import AccessDeniedPage from "#/app/access-denied/page";
 import { useSession } from "#/lib/auth-client";
 import { type ReactNode, useEffect, useState } from "react";
