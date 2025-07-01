@@ -9,12 +9,13 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
       POSTGRES_DB: iam_db
+      HOST: 127.0.0.1
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d iam_db"]
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d iam_db" ]
       interval: 10s
       timeout: 5s
       retries: 5
